@@ -1,0 +1,24 @@
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
+def page6(request):
+    return render(request, 'ModeratorPanel.html', {})
+
+// main panel 
+
+
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
+def addclub(request):
+    if request.method == "POST" or None:
+        form = ClubForm(request.POST, request.FILES)
+        if form.is_valid():
+            new_club1 = form.save(commit=False)
+            new_club1.author = request.user
+            new_club1.save()
+            return redirect('ModeratorPanel')
+    else:
+        form = ClubForm()
+    return render(request, 'new_club.html', {'form': form})
+
+
+// add club kýsmý form kýsýmlarý tam bitmedi. html kýsýmlarýný tam bitirmedim.
