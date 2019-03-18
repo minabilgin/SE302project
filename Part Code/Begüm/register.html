@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                 <div class="topnav">
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid" href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
+            </div>
+            </div>
+        </div>
+        <h1>Welcome!</h1>
+        <p>Please fill in this form to create an account.</p>
+
+        {% block content %}
+            <form class="site-form" action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <p style="text-align: center">
+                    <input class="registerbtn" type="submit" value="Signup">
+                </p>
+            </form>
+        {% endblock %}
+    </div>
+    <div class="container signin">
+        <p>Already have an account? <a
+                href="{% url 'Login' %}">Sign
+            in</a>.</p>
+    </div>
+</body>
+</html>
