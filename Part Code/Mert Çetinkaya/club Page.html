@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Kulüpler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background: lightblue;
+
+        }
+
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 11px 15px;
+            text-decoration: none;
+            margin: auto;
+            background: lightblue;
+
+        }
+
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        .middle {
+
+            height: 650px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            border: 2px double grey;
+        }
+
+        .dropdownmenu {
+
+
+            margin: 5px;
+            padding: 5px;
+
+
+        }
+
+        .forinfo {
+
+            height: 150px;
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+
+        }
+
+        .image {
+            height: 150px;
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+
+
+        }
+
+        a {
+
+            color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-lg-4">
+
+            <a> hava durumu eklenicek </a>
+
+        </div>
+        <div class="col-lg-4">
+
+            <h1>Kulüp Etkinlik Sayfası</h1>
+        </div>
+        <div class="col-lg-2">
+
+
+        </div>
+        <div class="col-lg-2">
+
+
+            <p>{% if user.is_authenticated %}
+
+                <b>Hosgeldiniz {{ request.user }}</b>
+
+                <a>
+                    
+                </a>
+
+            {% else %}
+
+                <a href="">
+                    </a>
+                <b>||</b> <a href=" ">
+                    </a>
+
+            {% endif %}
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="topnav">
+
+
+                <a style="border-right: 2px grey solid" href=" ">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+
+                <a style="float: right" href="" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="" target="_blank">Web
+                    Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="" target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid"
+                   href="" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href=" "><b>Moderator
+                        Panel</b></a>{% endif %}
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-4"></div>
+        <div class="col-lg-6">
+
+            <div class="dropdownmenu">
+                <select style="width: 75%">
+                    <option value="B" selected>A-Z ye Kulüpler</option>
+                </select>
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="middle">
+
+
+                {% for club in each_club %}
+
+                    {% if club.status == 'P' %}
+
+
+
+                        <div>
+
+                            <div class="row">
+
+
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-2">
+                                    <div class="image " style="text-align:center">
+
+                                        <img src="{{ club.club_emblem.url }}"
+                                             style="width:125px; height:125px ;">
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+
+
+                                    <div class="forinfo">
+
+
+                                        <a href=""
+                                           style="color:black;text-decoration: none">
+
+                                            <p>
+                                                <b> {{ club.club_name }}</b></p>
+                                            <p>{{ club.club_infos }} </p></a>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-1"></div>
+
+                            </div>
+
+
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+</div>
+
+</body>
+</html>
