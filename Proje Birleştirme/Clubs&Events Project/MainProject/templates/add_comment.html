@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Add Comment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/484df5253e.js"></script>
+    <meta charset="UTF-8">
+    <style>
+
+
+        .ForButton {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+
+
+        }
+
+        .ForButton:hover {
+            opacity: 1;
+        }
+
+        .ForButton1 {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+            visibility: hidden;
+
+        }
+
+        .ForButton1:hover {
+            opacity: 1;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Menü kısmı baslangıc */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin: auto;
+
+        }
+
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Menü kısmı bitis */
+
+
+        /* Add a card effect for articles */
+        .card {
+
+            height: 550px;
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+         .card1 {
+
+            height: 450px;
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+        .takvim {
+
+            height: 550px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+
+        /* banner */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        .paraf {
+
+            text-decoration: #333333;
+            font-family: "Arial Black";
+            font-size: 20px;
+
+
+        }
+
+        a {
+
+            color: darkblue;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+
+            <a><img src="https://w.bookcdn.com/weather/picture/26_18319_1_21_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=37657"/></a>
+
+        </div>
+        <div class="col-lg-4">
+
+            <h1>Kulüp Etkinlik Sayfası</h1>
+        </div>
+        <div class="col-lg-2">
+
+
+        </div>
+        <div class="col-lg-2">
+
+
+            <p>{% if user.is_authenticated %}
+
+                <b>Hello {{ request.user }}</b>
+
+
+            {% else %}
+                <a href="{% url 'Login' %}">Login</a><a> || </a><a
+                        href=" {% url 'Register' %}">Register</a>
+
+            {% endif %}
+
+            </p>
+
+            <p>
+
+                <button class=ForButton onclick="openFullscreen() " id="FullScreenButton">Full Screen</button>
+                <button class=ForButton1 onclick="closeFullscreen()" id="NormalScreenButton">Normal Screen</button>
+
+
+                <script>
+                    var elem = document.documentElement;
+
+                    function openFullscreen() {
+
+                        document.getElementById("FullScreenButton").style.visibility = "hidden";
+                        document.getElementById("NormalScreenButton").style.visibility = "visible";
+
+                        if (elem.requestFullscreen) {
+                            elem.requestFullscreen();
+                        } else if (elem.mozRequestFullScreen) { /* Firefox */
+                            elem.mozRequestFullScreen();
+                        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                            elem.webkitRequestFullscreen();
+                        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                            elem.msRequestFullscreen();
+                        }
+                    }
+
+                    function closeFullscreen() {
+
+
+                        document.getElementById("FullScreenButton").style.visibility = "visible";
+                        document.getElementById("NormalScreenButton").style.visibility = "hidden";
+
+
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.mozCancelFullScreen) {
+                            document.mozCancelFullScreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                    }
+                </script>
+
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="topnav">
+
+
+                <a href="{% url 'anasayfa' %}">Home</a>
+                <a href="{% url 'kulupler' %}">Kulüpler</a>
+                <a href="{% url 'Favori Kulüpler' %}">Favori
+                    Kulüpler</a>
+                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
+                <a href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
+                <a href="https://course.isikun.edu.tr/" target="_blank">Course Online</a>
+                <a style="float: right" href="{% url 'ModeratorPanel' %}">Moderator Panel</a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-9">
+            <div class="card">
+
+                <div class="row">
+                    <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3">
+                        <div class="card1">
+                            <div class="ForFormTable">
+                                <form method="post" class="post-form" action="{% url 'add_comment' event.pk %}">{% csrf_token %}
+                                    <div>
+                                        <p>Etkinlik Hakkında Ne Düşünüyorsunuz ?</p>
+                                        <textarea id="comment" name="comment" class="" style="height: 150px ; width: 350px"></textarea>
+                                    </div>
+                                    <button type="submit" class="save btn btn-default" style="float: right">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="takvim">
+
+                <iframe src="https://calendar.google.com/calendar/htmlembed?src=%23contacts%40group.v.calendar.google.com&ctz=Europe%2FIstanbul"
+                        style="border:0" ;width="115" height="375" frameborder="0" scrolling="no"></iframe>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+
+
+        <div class="col-lg-12">
+
+            <div class="footer">
+                <h2>Footer</h2>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
