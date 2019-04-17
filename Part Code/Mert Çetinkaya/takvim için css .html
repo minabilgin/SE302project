@@ -1,0 +1,206 @@
+/* takvim için css  baslangıc */
+
+        .cardfortakvim {
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            border: 2px double grey;
+            background-color: white;
+        }
+
+        .datepicker {
+            width: 300px;
+            background: #fdfdfd;
+            border-radius: 10px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.2);
+            margin: 15px auto;
+            overflow: hidden;
+        }
+
+        .datepicker .datepicker-header {
+            height: 215px;
+            background-image: url("https://assets.visitphilly.com/wp-content/uploads/2018/06/festival-pier-penns-landing-new-crtsy-festival-pier-2200x1237px.jpg");
+            background-size: 125%;
+            background-repeat :no-repeat;
+        }
+
+        .datepicker .ui-datepicker-inline {
+            padding: 30px;
+        }
+
+        .datepicker .ui-datepicker-header {
+            text-align: center;
+            font-size: 1.4em;
+            padding-bottom: .5em;
+            letter-spacing: .1em;
+            color: #333;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-prev,
+        .datepicker .ui-datepicker-header .ui-datepicker-next {
+            float: left;
+            cursor: pointer;
+            font-size: 1.4em;
+            padding: 0 5px;
+            margin-top: -8px;
+            color: #ddd;
+            transition: .6s;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-next {
+            float: right;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
+            transform: translateX(-25px)
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+            transform: translateX(25px)
+        }
+
+        .datepicker .ui-datepicker-calendar {
+            width: 100%;
+            text-align: center;
+        }
+
+        .datepicker .ui-datepicker-calendar thead {
+            color: #ddd;
+        }
+
+        .datepicker .ui-datepicker-calendar tr th,
+        .datepicker .ui-datepicker-calendar tr td {
+            padding-bottom: .4em;
+        }
+
+        .datepicker .ui-datepicker-calendar a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .datepicker .ui-datepicker-calendar a:hover {
+            background: #5d92e4;
+            color: #fff;
+            transition: .7s;
+            transform: scale(1);
+        }
+
+        .datepicker .ui-datepicker-calendar .ui-state-highlight {
+            background: #86b7e7;
+            color: #fff;
+        }
+
+        .datepicker .ui-datepicker-calendar .ui-state-highlight:hover {
+            color: #fff;
+        }
+
+        /* takvim için css bitiş */
+
+
+        /*  anasayfa sağ taraf calısma alanı baslangıc */
+
+        .mert {
+            position: relative;
+            margin-left: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 14px;
+            border-radius: 6px;
+            width: 250px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        .murat ul {
+            margin: 0;
+            margin-top: 25px;
+            list-style: none;
+            position: relative;
+            padding: 1px 40px;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .murat ul:before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            border-left: 2px dashed white;
+
+        }
+
+        .murat ul li:not(:first-child) {
+            margin-top: 60px;
+        }
+
+        .murat ul li > span {
+            width: 2px;
+            height: 100%;
+            background: #fff;
+            left: -30px;
+            top: 0;
+            position: absolute;
+        }
+
+        .murat ul li > span:before, .murat ul li > span:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            background: #86b7e7;
+            left: -5px;
+            top: 0;
+        }
+
+        .murat ul li span:after {
+            top: 100%;
+        }
+
+        .murat ul li > div {
+            margin-left: 10px;
+        }
+
+        .murat div .title, .murat div .type {
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .murat div .info {
+            font-weight: 300;
+        }
+
+        .murat div > div {
+            margin-top: 5px;
+        }
+
+        .murat span.number {
+            height: 100%;
+        }
+
+        .murat span.number span {
+            position: absolute;
+            font-size: 10px;
+            left: -35px;
+            font-weight: bold;
+        }
+
+        .murat span.number span:first-child {
+            top: 10px;
+
+        }
+
+        .timeline span.number span:last-child {
+            top: 100%;
+        }
+
+
+        /*  anasayfa sağ taraf calısma alanı  bitiş*/
