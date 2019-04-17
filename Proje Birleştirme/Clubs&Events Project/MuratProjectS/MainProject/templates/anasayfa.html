@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/484df5253e.js"></script>
+    <meta charset="UTF-8">
+    <style>
+
+
+        .ForButton {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+
+
+        }
+
+        .ForButton:hover {
+            opacity: 1;
+        }
+
+        .ForButton1 {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+            visibility: hidden;
+
+        }
+
+        .ForButton1:hover {
+            opacity: 1;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Menü kısmı baslangıc */
+        .topnav {
+            overflow: hidden;
+            background: lightblue;
+
+        }
+
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 11px 15px;
+            text-decoration: none;
+            margin: auto;
+            background: lightblue;
+
+        }
+
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Menü kısmı bitis */
+
+
+        /* Add a card effect for articles */
+        .card {
+
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+
+        .takvim {
+
+            height: 550px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+
+        /* banner */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        .paraf {
+
+            text-decoration: #333333;
+            font-family: "Arial Black";
+            font-size: 20px;
+
+
+        }
+
+        a {
+
+            color: darkblue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+
+            <a><img src="https://w.bookcdn.com/weather/picture/26_18319_1_21_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=37657"/></a>
+
+        </div>
+        <div class="col-lg-4">
+
+            <h1>Kulüp Etkinlik Sayfası</h1>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+
+
+            <p>{% if user.is_authenticated %}
+
+                <b>Hosgeldiniz {{ request.user }}</b>
+
+                <a>
+                    <form class="logout-link" action="{% url 'user_logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-off"></span> Logout
+                        </button>
+                    </form>
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'Login' %}">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    Login</a>
+                <b>||</b> <a href="{% url 'Register' %}">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Register</a>
+
+            {% endif %}
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="topnav">
+
+
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
+                    Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/"
+                   target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid"
+                   href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card" style="font-family: 'Urdu Typesetting';font-size: 17px">
+
+                <p>Aktif Kulüpler</p>
+                <p style="border: grey 2px double"></p>
+                <form action="{% url 'anasayfa' %}" method="GET">
+                    {% for clubs in each_club %}
+                        {% if clubs.status == 'P' %}
+                            <div>
+
+                                <input type="checkbox" name="q"
+                                       id="{{ clubs.pk }}" value="{{ clubs.club_name }}"> {{ clubs.club_name }}
+                                <br>
+
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <p></p>
+                    <p style="border: grey 2px double"></p>
+                    <button style="font-family: 'Times New Roman'" class="ForButton" type="submit">Filtrele</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+
+
+                {% for event in clublist %}
+                    {% if event.club.status == 'P' %}
+
+
+
+
+
+                        <div style="font-family: 'Urdu Typesetting'">
+
+
+                            <p style="font-size: 12px">Published Date {{ event.event_created_date }}</p>
+                            <p style="font-size: 20px"><b>{{ event.club }} : {{ event.event_name }}</b></p>
+                            <p style="font-size: 17px"> 📍 {{ event.event_location }}</p>
+                            <p style="font-size: 17px"> 📅 {{ event.event_day }}</p>
+                            <p style="font-size: 17px"> 🎙 👉{{ event.event_info }}</p>
+                            <p><b>Yorum Ekle! </b><a href="{% url 'add_comment' pk=event.pk %}">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a></p>
+
+                            <p style="border: 2px double gray"></p>
+
+
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+
+            </div>
+
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="takvim">
+
+                <iframe src="https://calendar.google.com/calendar/htmlembed?src=%23contacts%40group.v.calendar.google.com&ctz=Europe%2FIstanbul"
+                        style="border:0" ;width="115" height="375" frameborder="0" scrolling="no"></iframe>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="footer">
+                <h2>Footer</h2>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
