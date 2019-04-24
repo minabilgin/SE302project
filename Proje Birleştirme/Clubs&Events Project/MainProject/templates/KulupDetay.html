@@ -54,18 +54,20 @@
         /* Menü kısmı baslangıc */
         .topnav {
             overflow: hidden;
-            background-color: #333;
+            background: lightblue;
 
         }
+
 
         .topnav a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: black;
             text-align: center;
-            padding: 14px 16px;
+            padding: 11px 15px;
             text-decoration: none;
             margin: auto;
+            background: lightblue;
 
         }
 
@@ -74,6 +76,7 @@
             background-color: #ddd;
             color: black;
         }
+
 
         /*
         .forinfo {
@@ -123,8 +126,9 @@
         .footer {
             padding: 20px;
             text-align: center;
-            background: #ddd;
             margin-top: 20px;
+            background-color: lightblue;
+            color: black;
         }
 
 
@@ -177,7 +181,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 
     <div class="row">
         <div class="col-lg-4">
@@ -198,71 +202,29 @@
 
             <p>{% if user.is_authenticated %}
 
-                <b>Hello {{ request.user }}</b>
+                <b>Hosgeldiniz {{ request.user }}</b>
 
-                <a style="float: right">
-                    <form class="logout-link" action="" method="post">
+                <a>
+                    <form class="logout-link" action="{% url 'user_logout' %}" method="post">
                         {% csrf_token %}
-
-                        <button type="submit">Logout</button>
-
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-off"></span> Logout
+                        </button>
                     </form>
-
                 </a>
 
             {% else %}
-                <a href="{% url 'Login' %}">Login</a><a> || </a><a
-                        href=" {% url 'Register' %}">Register</a>
+
+                <a href="{% url 'Login' %}">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    Login</a>
+                <b>||</b> <a href="{% url 'Register' %}">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Register</a>
 
             {% endif %}
-
             </p>
 
-            <p>
-
-                <button class=ForButton onclick="openFullscreen() " id="FullScreenButton">Full Screen</button>
-                <button class=ForButton1 onclick="closeFullscreen()" id="NormalScreenButton">Normal Screen</button>
-
-
-                <script>
-                    var elem = document.documentElement;
-
-                    function openFullscreen() {
-
-                        document.getElementById("FullScreenButton").style.visibility = "hidden";
-                        document.getElementById("NormalScreenButton").style.visibility = "visible";
-
-                        if (elem.requestFullscreen) {
-                            elem.requestFullscreen();
-                        } else if (elem.mozRequestFullScreen) { /* Firefox */
-                            elem.mozRequestFullScreen();
-                        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                            elem.webkitRequestFullscreen();
-                        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                            elem.msRequestFullscreen();
-                        }
-                    }
-
-                    function closeFullscreen() {
-
-
-                        document.getElementById("FullScreenButton").style.visibility = "visible";
-                        document.getElementById("NormalScreenButton").style.visibility = "hidden";
-
-
-                        if (document.exitFullscreen) {
-                            document.exitFullscreen();
-                        } else if (document.mozCancelFullScreen) {
-                            document.mozCancelFullScreen();
-                        } else if (document.webkitExitFullscreen) {
-                            document.webkitExitFullscreen();
-                        } else if (document.msExitFullscreen) {
-                            document.msExitFullscreen();
-                        }
-                    }
-                </script>
-
-            </p>
 
         </div>
     </div>
@@ -274,14 +236,20 @@
             <div class="topnav">
 
 
-                <a href="{% url 'anasayfa' %}">Home</a>
-                <a href="{% url 'kulupler' %}">Kulüpler</a>
-                <a href="{% url 'Favori Kulüpler' %}">Favori
-                    Kulüpler</a>
-                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
-                <a href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
-                <a href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
-                <a href="https://course.isikun.edu.tr/" target="_blank">Course Online</a>
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
+                    Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/"
+                   target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid"
+                   href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
 
 
             </div>
@@ -319,7 +287,10 @@
                     <div class="col-lg-2">
 
                         <div class="image " style="text-align:center">
-                            <img src="{{ club_det.club_emblem.url }}" style="width: 125px ; height: 125px">
+
+                            <img src="{{ club_det.club_emblem.url }}"
+                                 style="width:125px; height:125px ;">
+                            
                         </div>
 
 
@@ -359,7 +330,17 @@
 
                                         {% if comment.event.id == event.id %}
                                             <p><b>User:</b> {{ comment.user }}</p>
-                                            <p><b>Comment:</b> {{ comment.comment }}</p>
+                                            {% if comment.status == 'W' %}
+                                                <p>Comment : <b>Gönderiniz daha onaylanmadı.</b></p>
+                                            {% elif comment.status == 'R' %}
+                                                <p style="color: red"><b>Comment :</b> Gönderiniz uygun olmadığı için
+                                                    yayınlanamıyor.. </p>
+                                            {% else %}
+                                                <p>Comment:</b> {{ comment.comment }}</p>
+
+                                            {% endif %}
+
+
                                             <p style="border: 1px solid gray"></p>
                                         {% endif %}
                                     {% endfor %}

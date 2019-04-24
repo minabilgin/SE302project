@@ -49,18 +49,20 @@
 
         .topnav {
             overflow: hidden;
-            background-color: #333;
+            background: lightblue;
 
         }
+
 
         .topnav a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: black;
             text-align: center;
-            padding: 14px 16px;
+            padding: 11px 15px;
             text-decoration: none;
             margin: auto;
+            background: lightblue;
 
         }
 
@@ -69,6 +71,7 @@
             background-color: #ddd;
             color: black;
         }
+
 
 
     </style>
@@ -86,17 +89,20 @@
 
         <div class="col-lg-12">
 
-            <div class="topnav">
+             <div class="topnav">
 
 
-                <a href="{% url 'anasayfa' %}">Home</a>
-                <a href="{% url 'kulupler' %}">Kulüpler</a>
-                <a href="{% url 'Favori Kulüpler' %}">Favori
-                    Kulüpler</a>
-                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
-                <a href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
-                <a href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
-                <a href="https://course.isikun.edu.tr/" target="_blank">Course Online</a>
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid" href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
 
 
             </div>
