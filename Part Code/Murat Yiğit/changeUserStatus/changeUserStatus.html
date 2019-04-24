@@ -267,7 +267,7 @@
             <div class="card">
 
                {% for username in auth_user %}
-
+                    {% if username != request.user %}
                         <form method="post" action="">
                             {% csrf_token %}
                             <dıv class="moderatorWrapper">
@@ -287,7 +287,7 @@
                                  {% endif %}
                         </form>
                         <p style="border: 1px grey double"></p>
-
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
