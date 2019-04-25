@@ -125,8 +125,9 @@
         .footer {
             padding: 20px;
             text-align: center;
-            background: #ddd;
             margin-top: 20px;
+            background-color: lightblue;
+            color: black;
         }
 
         .paraf {
@@ -209,7 +210,7 @@
 
         <div class="col-lg-12">
 
-             <div class="topnav">
+            <div class="topnav">
                 <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
                 <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
                 {% if user.is_authenticated %}
@@ -250,6 +251,8 @@
                 <p style="border-bottom: 2px double gray;color: darkblue"> Comments</p>
                 <p><a style="color: black" href="{% url 'allcomments' %}"> 👉Access All Comments</a></p>
 
+                <p style="border-bottom: 2px double gray;color: darkblue">Authority Section</p>
+                <p><a style="color: black" href="{% url 'changeUserStatus' %}"> 👉Change user status</a></p>
 
             </div>
 
@@ -268,7 +271,7 @@
                         <input type="hidden" name="pk" value="{{ club_obj.pk }}">
                         <input type="hidden" name="status" value="P">
                         <p>If you want to publish press this button
-                            <button type="submit" class="save btn btn-default">Published (P)</button>
+                            <button type="submit" class="save btn btn-success">Published (P)</button>
                         </p>
                     </form>
                 </div>
@@ -276,9 +279,10 @@
                     <form method="post" class="post-form" action="{% url 'change_status' %}">{% csrf_token %}
                         <input type="hidden" name="pk" value="{{ club_obj.pk }}">
                         <input type="hidden" name="status" value="D">
-                        <p>If you want to  hold press this button
-                            <button type="submit" class="save btn btn-default" name="Draw">Draw (D)
-                            </button></p>
+                        <p>If you want to hold press this button
+                            <button type="submit" class="save btn btn-danger" name="Draw">Draw (D)
+                            </button>
+                        </p>
                     </form>
                 </div>
 
@@ -320,7 +324,7 @@
         <div class="col-lg-12">
 
             <div class="footer">
-                <h2>Footer</h2>
+                <h2>IŞIK UNİVERSİTESİ</h2>
             </div>
         </div>
 

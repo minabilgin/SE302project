@@ -1,6 +1,6 @@
 from builtins import filter
 
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
 from .models import Clubs, Comments, Events, User
 from .forms import ClubForm, EventForm, CommentForm, UpdateEventForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -19,6 +19,8 @@ def anasayfa(request):
     return render(request, 'anasayfa.html', {'clublist': clublist, 'each_club': each_club, 'events_list': events_list})
 
 
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def changeUserStatusDetail(request):
     if request.method == 'POST':
         id = request.POST['val']
@@ -29,6 +31,8 @@ def changeUserStatusDetail(request):
     redirect('changeUserStatus')
 
 
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def changeUserStatus(request):
     allUserObjects = User.objects.all()
     if request.method == 'POST':
@@ -75,10 +79,21 @@ def page6(request):
 
 
 def club_details(request, pk):
+    kayıtlımı = None
+    count = 0
     club = get_object_or_404(Clubs, pk=pk)
+    for member in club.favorite_user.all():
+        if member == request.user:
+            count = count + 1
+
+    if count != 0:
+        kayıtlımı = True
+    else:
+        kayıtlımı = False
     events = Events.objects.filter(club_id=pk).all()
     comments = Comments.objects.filter(event__in=events)
-    return render(request, "KulupDetay.html", {'club_det': club, 'club_event': events, 'comments': comments})
+    return render(request, "KulupDetay.html",
+                  {'club_det': club, 'club_event': events, 'comments': comments, 'kayıtlımı': kayıtlımı})
 
 
 @login_required(login_url='/Login')
@@ -148,6 +163,7 @@ def editclub(request, pk):
 
 
 @login_required(login_url="/Login")
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def change_club_status(request):
     if request.method == "POST":
         status = request.POST.get("status", None)
@@ -157,7 +173,7 @@ def change_club_status(request):
             obj.status = status
             obj.save()
 
-    return redirect('ModeratorPanel')
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required(login_url='/Login')
@@ -184,10 +200,12 @@ def adding_comment(request, pk):
             user = request.user
             instance = Comments(user=user, event_id=pk, comment=comment)
             instance.save()
-            return redirect('anasayfa')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     return render(request, 'add_comment.html', {'event': obj})
 
 
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def allcomments(request):
     commentslist = Comments.objects.order_by('status')
     return render(request, 'allcomments.html', {'commentslist': commentslist})
@@ -199,6 +217,8 @@ def user_logout(request):
     return redirect('anasayfa')
 
 
+@login_required(login_url='/Login')
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def allcomments_details(request, pk):
     obj = get_object_or_404(Comments, pk=pk)
     if request.method == "POST":
@@ -210,7 +230,7 @@ def allcomments_details(request, pk):
             return redirect('allcomments')
     else:
         comment = CommentForm(instance=obj)
-    return render(request, 'allcomments_detail.html', {'comment': comment})
+    return render(request, 'allcomments_detail.html', {'comment': comment, 'obj': obj})
 
 
 def event_detail(request, pk):
@@ -218,6 +238,7 @@ def event_detail(request, pk):
     return render(request, 'EventDetail.html', {'event': event})
 
 
+@login_required(login_url='/Login')
 def user_favorites(request):
     obj = Clubs.objects.filter(favorite_user__in=[request.user.id]).all()
     events_list = Events.objects.filter(club__in=obj).order_by('-event_day')
@@ -225,3 +246,34 @@ def user_favorites(request):
     if q is not None and len(q) != 0:
         events_list = Events.objects.filter(club__club_name__in=q).all()
     return render(request, 'Favori Kulüpler.html', {'events_list': events_list, 'obj': obj})
+
+
+@login_required(login_url="/Login")
+@user_passes_test(lambda u: u.is_staff, login_url='/Login')
+def change_comment_status(request, pk):
+    if request.method == "POST":
+        status = request.POST.get("status", None)
+        if status:
+            obj = get_object_or_404(Comments, pk=pk)
+            obj.status = status
+            obj.save()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def add_favorite(request, pk):
+    if request.method == "POST":
+        obj = get_object_or_404(Clubs, pk=pk)
+        obj.favorite_user.add(request.user)
+        obj.save()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def delete_favorite(request, pk):
+    if request.method == "POST":
+        obj = get_object_or_404(Clubs, pk=pk)
+        obj.favorite_user.remove(request.user)
+        obj.save()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

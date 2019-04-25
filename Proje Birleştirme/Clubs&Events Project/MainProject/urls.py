@@ -25,4 +25,7 @@ urlpatterns = [
                   path('EventDetail/<int:pk>/', views.event_detail, name='EventDetail'),
                   path('logout', views.user_logout, name="user_logout"),
                   path('favorilerim', views.user_favorites, name='favorilerim'),
+                  path('commentstatus/<str:pk>/', views.change_comment_status, name='commentstatus'),
+                  path('addfavorites/<str:pk>/', views.add_favorite, name='addfavorites'),
+                  path('deletefavorites/<str:pk>/', views.delete_favorite, name='delete_favorite'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

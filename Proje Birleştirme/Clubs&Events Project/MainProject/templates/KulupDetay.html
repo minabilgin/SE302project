@@ -251,52 +251,51 @@
                     <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
                         Panel</b></a>{% endif %}
             </div>
-
         </div>
-
     </div>
-
-
     <div class="row">
-
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
             <div class="üstbanner">
                 <p>Kulübün tüm yaptığı ve yapacağı etkinlikleri buradan görebilir, kulüp hakkında detaylı bilgi
                     edinebilirsiniz.</p>
             </div>
-
-
         </div>
         <div class="col-lg-2"></div>
-
     </div>
-
     <div class="row">
-
-
         <div class="col-lg-12">
-
             <div class="card">
-
                 <div class="row">
-
                     <div class="col-lg-1"></div>
                     <div class="col-lg-2">
-
                         <div class="image " style="text-align:center">
-
                             <img src="{{ club_det.club_emblem.url }}"
                                  style="width:125px; height:125px ;">
-                            
                         </div>
-
-
                         <div class="col-lg-1"></div>
-
                     </div>
                     <div class="col-lg-8">
-                        <div class="forinfo"><p> {{ club_det.club_name }}  </p>
+                        <div class="forinfo">
+                            <p> {{ club_det.club_name }}
+                                {% if kayıtlımı %}
+                                    <form method="post" class="post-form"
+                                          action="{% url 'delete_favorite' club_det.pk %}">{% csrf_token %}
+                                        <input type="hidden" name="pk" value="{{ obj.pk }}">
+                                        <button type="submit" class="btn btn-danger"
+                                                style="font-size:10px">Favoriden Çıkart
+                                        </button>
+                                    </form>
+                                {% else %}
+                                    <form method="post" class="post-form"
+                                          action="{% url 'addfavorites' club_det.pk %}">{% csrf_token %}
+                                        <input type="hidden" name="pk" value="{{ obj.pk }}">
+                                        <button type="submit" class="btn btn-success"
+                                                style="font-size:10px">Favoriye Ekle
+                                        </button>
+                                    </form>
+                                {% endif %}
+                            </p>
                             <p> {{ club_det.club_infos }}  </p>
                         </div>
                     </div>
@@ -365,7 +364,7 @@
         <div class="col-lg-12">
 
             <div class="footer">
-                <h2>Footer</h2>
+                <h2>IŞIK UNİVERSİTESİ</h2>
             </div>
         </div>
     </div>

@@ -47,6 +47,9 @@ class Comments(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField(null=False, blank=False)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='W')
+    created_day = models.DateTimeField(default=timezone.now)
+
+
 
 
 def make_published(modeladmin, request, queryset):

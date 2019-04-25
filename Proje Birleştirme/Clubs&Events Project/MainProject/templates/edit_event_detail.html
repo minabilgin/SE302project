@@ -122,11 +122,12 @@
 
 
         /* banner */
-        .footer {
+       .footer {
             padding: 20px;
             text-align: center;
-            background: #ddd;
             margin-top: 20px;
+            background-color: lightblue;
+            color: black;
         }
 
         .paraf {
@@ -209,7 +210,7 @@
 
         <div class="col-lg-12">
 
-               <div class="topnav">
+            <div class="topnav">
                 <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
                 <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
                 {% if user.is_authenticated %}
@@ -250,7 +251,8 @@
                 <p style="border-bottom: 2px double gray;color: darkblue"> Comments</p>
                 <p><a style="color: black" href="{% url 'allcomments' %}"> 👉Access All Comments</a></p>
 
-
+                <p style="border-bottom: 2px double gray;color: darkblue">Authority Section</p>
+                <p><a style="color: black" href="{% url 'changeUserStatus' %}"> 👉Change user status</a></p>
             </div>
 
         </div>
@@ -263,10 +265,10 @@
 
                     <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
                         <div class="ForFormTable" style="overflow-y: scroll">
-                             <form method="post" class="post-form" action="">{% csrf_token %}
-                                 {{  event.as_p }}
-                                 <button type="submit" class="save btn btn-default">Save</button>
-                             </form>
+                            <form method="post" class="post-form" action="">{% csrf_token %}
+                                {{ event.as_p }}
+                                <button type="submit" class="save btn btn-default">Save</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -295,7 +297,7 @@
         <div class="col-lg-12">
 
             <div class="footer">
-                <h2>Footer</h2>
+                <h2>IŞIK UNİVERSİTESİ</h2>
             </div>
         </div>
 
