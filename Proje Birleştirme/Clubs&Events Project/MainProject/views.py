@@ -216,3 +216,12 @@ def allcomments_details(request, pk):
 def event_detail(request, pk):
     event = get_object_or_404(Events, pk=pk)
     return render(request, 'EventDetail.html', {'event': event})
+
+
+def user_favorites(request):
+    obj = Clubs.objects.filter(favorite_user__in=[request.user.id]).all()
+    events_list = Events.objects.filter(club__in=obj).order_by('-event_day')
+    q = request.GET.getlist("q", None)
+    if q is not None and len(q) != 0:
+        events_list = Events.objects.filter(club__club_name__in=q).all()
+    return render(request, 'Favori Kulüpler.html', {'events_list': events_list, 'obj': obj})

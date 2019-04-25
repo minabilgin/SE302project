@@ -24,4 +24,5 @@ urlpatterns = [
                   path('edit_club_detail/<str: pk>/change', views.change_club_status, name="change_status"),
                   path('EventDetail/<int:pk>/', views.event_detail, name='EventDetail'),
                   path('logout', views.user_logout, name="user_logout"),
+                  path('favorilerim', views.user_favorites, name='favorilerim'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

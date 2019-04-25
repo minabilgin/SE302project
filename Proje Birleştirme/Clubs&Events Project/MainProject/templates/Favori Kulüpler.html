@@ -13,7 +13,225 @@
     <script src="https://use.fontawesome.com/484df5253e.js"></script>
     <meta charset="UTF-8">
     <style>
+        .cardfortimeline {
+            margin-top: 20px;
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            border: 2px double grey;
+            background-image: url("https://s2.wp.com/wp-content/themes/vip/shaw-globalnews/_img/events/ev-banner-concert.png?quality=70&strip=all&w=256&h=144&crop=1");
+        }
 
+        /* takvim için css  baslangıc */
+
+        .cardfortakvim {
+
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            border: 2px double grey;
+            background-color: white;
+        }
+
+        .datepicker {
+            width: 300px;
+            background: #fdfdfd;
+            border-radius: 10px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.2);
+            margin: 15px auto;
+            overflow: hidden;
+        }
+
+        .datepicker .datepicker-header {
+            height: 215px;
+            background-image: url("https://assets.visitphilly.com/wp-content/uploads/2018/06/festival-pier-penns-landing-new-crtsy-festival-pier-2200x1237px.jpg");
+            background-size: 125%;
+            background-repeat: no-repeat;
+        }
+
+        .datepicker .ui-datepicker-inline {
+            padding: 30px;
+        }
+
+        .datepicker .ui-datepicker-header {
+            text-align: center;
+            font-size: 1.4em;
+            padding-bottom: .5em;
+            letter-spacing: .1em;
+            color: #333;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-prev,
+        .datepicker .ui-datepicker-header .ui-datepicker-next {
+            float: left;
+            cursor: pointer;
+            font-size: 1.4em;
+            padding: 0 5px;
+            margin-top: -8px;
+            color: #ddd;
+            transition: .6s;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-next {
+            float: right;
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
+            transform: translateX(-25px)
+        }
+
+        .datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+            transform: translateX(25px)
+        }
+
+        .datepicker .ui-datepicker-calendar {
+            width: 100%;
+            text-align: center;
+        }
+
+        .datepicker .ui-datepicker-calendar thead {
+            color: #ddd;
+        }
+
+        .datepicker .ui-datepicker-calendar tr th,
+        .datepicker .ui-datepicker-calendar tr td {
+            padding-bottom: .4em;
+        }
+
+        .datepicker .ui-datepicker-calendar a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .datepicker .ui-datepicker-calendar a:hover {
+            background: #5d92e4;
+            color: #fff;
+            transition: .7s;
+            transform: scale(1);
+        }
+
+        .datepicker .ui-datepicker-calendar .ui-state-highlight {
+            background: #86b7e7;
+            color: #fff;
+        }
+
+        .datepicker .ui-datepicker-calendar .ui-state-highlight:hover {
+            color: #fff;
+        }
+
+        /* takvim için css bitiş */
+
+
+        /*  anasayfa sağ taraf calısma alanı baslangıc */
+
+        .mert {
+            margin-top: 20px;
+            position: relative;
+            margin-left: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding-top: 12px;
+            padding-left: 12px;
+            padding-bottom: 20px;
+            border-radius: 6px;
+            width: 250px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        .murat ul {
+            margin: 0;
+            margin-top: 25px;
+            list-style: none;
+            position: relative;
+            padding: 1px 40px;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .murat ul:before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            border-left: 2px dashed white;
+
+        }
+
+        .murat ul li:not(:first-child) {
+            margin-top: 60px;
+        }
+
+        .murat ul li > span {
+            width: 2px;
+            height: 100%;
+            background: #fff;
+            left: -30px;
+            top: 0;
+            position: absolute;
+        }
+
+        .murat ul li > span:before, .murat ul li > span:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            background: #86b7e7;
+            left: -5px;
+            top: 0;
+        }
+
+        .murat ul li span:after {
+            top: 100%;
+        }
+
+        .murat ul li > div {
+            margin-left: 10px;
+        }
+
+        .murat div .title, .murat div .type {
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .murat div .info {
+            font-weight: 300;
+        }
+
+        .murat div > div {
+            margin-top: 5px;
+        }
+
+        .murat span.number {
+            height: 100%;
+        }
+
+        .murat span.number span {
+            position: absolute;
+            font-size: 10px;
+            left: -35px;
+            font-weight: bold;
+        }
+
+        .murat span.number span:first-child {
+            top: 10px;
+
+        }
+
+        .timeline span.number span:last-child {
+            top: 100%;
+        }
+
+
+        /*  anasayfa sağ taraf calısma alanı  bitiş*/
 
         .ForButton {
 
@@ -57,18 +275,20 @@
         /* Menü kısmı baslangıc */
         .topnav {
             overflow: hidden;
-            background-color: #333;
+            background: lightblue;
 
         }
+
 
         .topnav a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: black;
             text-align: center;
-            padding: 14px 16px;
+            padding: 11px 15px;
             text-decoration: none;
             margin: auto;
+            background: lightblue;
 
         }
 
@@ -77,6 +297,7 @@
             background-color: #ddd;
             color: black;
         }
+
 
         /* Menü kısmı bitis */
 
@@ -87,6 +308,16 @@
             height: 550px;
             overflow-x: hidden;
             overflow-y: scroll;
+            border: 2px double grey;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+        .card1 {
+
+            height: 550px;
             border: 2px double grey;
             background-color: white;
             padding: 20px;
@@ -117,7 +348,16 @@
             margin-top: 20px;
         }
 
-         a {
+        .paraf {
+
+            text-decoration: #333333;
+            font-family: "Arial Black";
+            font-size: 20px;
+
+
+        }
+
+        a {
 
             color: darkblue;
         }
@@ -126,117 +366,58 @@
     </style>
 </head>
 <body>
-
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-lg-4">
-
             <a><img src="https://w.bookcdn.com/weather/picture/26_18319_1_21_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=37657"/></a>
-
         </div>
         <div class="col-lg-4">
-
             <h1>Kulüp Etkinlik Sayfası</h1>
         </div>
+        <div class="col-lg-2"></div>
         <div class="col-lg-2">
-
-
-        </div>
-         <div class="col-lg-2">
-
-
             <p>{% if user.is_authenticated %}
-
-                <b>Hello {{ request.user }}</b>
-
-                <a style="float: right">
-                    <form class="logout-link" action="" method="post">
+                <b>Hosgeldiniz {{ request.user }}</b>
+                <a>
+                    <form class="logout-link" action="{% url 'user_logout' %}" method="post">
                         {% csrf_token %}
-
-                        <button type="submit">Logout</button>
-
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-off"></span> Logout
+                        </button>
                     </form>
-
                 </a>
-
             {% else %}
-                <a href="{% url 'Login' %}">Login</a><a> || </a><a
-                        href=" {% url 'Register' %}">Register</a>
-
+                <a href="{% url 'Login' %}" style="color: darkblue">
+                    <span class="glyphicon glyphicon-log-in" style="color: darkblue"></span>
+                    Login</a>
+                <b>||</b> <a href="{% url 'Register' %}" style="color: darkblue">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Register</a>
             {% endif %}
-
             </p>
-
-            <p>
-
-                <button class=ForButton onclick="openFullscreen() " id="FullScreenButton">Full Screen</button>
-                <button class=ForButton1 onclick="closeFullscreen()" id="NormalScreenButton">Normal Screen</button>
-
-
-                <script>
-                    var elem = document.documentElement;
-
-                    function openFullscreen() {
-
-                        document.getElementById("FullScreenButton").style.visibility = "hidden";
-                        document.getElementById("NormalScreenButton").style.visibility = "visible";
-
-                        if (elem.requestFullscreen) {
-                            elem.requestFullscreen();
-                        } else if (elem.mozRequestFullScreen) { /* Firefox */
-                            elem.mozRequestFullScreen();
-                        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                            elem.webkitRequestFullscreen();
-                        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                            elem.msRequestFullscreen();
-                        }
-                    }
-
-                    function closeFullscreen() {
-
-
-                        document.getElementById("FullScreenButton").style.visibility = "visible";
-                        document.getElementById("NormalScreenButton").style.visibility = "hidden";
-
-
-                        if (document.exitFullscreen) {
-                            document.exitFullscreen();
-                        } else if (document.mozCancelFullScreen) {
-                            document.mozCancelFullScreen();
-                        } else if (document.webkitExitFullscreen) {
-                            document.webkitExitFullscreen();
-                        } else if (document.msExitFullscreen) {
-                            document.msExitFullscreen();
-                        }
-                    }
-                </script>
-
-            </p>
-
         </div>
     </div>
-
     <div class="row">
-
         <div class="col-lg-12">
-
             <div class="topnav">
-
-
-                <a href="{% url 'anasayfa' %}">Home</a>
-                <a href="{% url 'kulupler' %}">Kulüpler</a>
-                <a href="{% url 'Favori Kulüpler' %}">Favori
-                    Kulüpler</a>
-                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
-                <a href="http://mail.isik.edu.tr" target="_blank">Web Mail</a>
-                <a href="http://campus.isikun.edu.tr/" target="_blank">Campus Online</a>
-                <a href="https://course.isikun.edu.tr/" target="_blank">Course Online</a>
-
-
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+                {% if user.is_authenticated %}
+                    <a style="border-right: 2px grey solid" href="{% url 'favorilerim' %}">Favori
+                        Kulüpler</a> {% endif %}
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
+                    Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/"
+                   target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid"
+                   href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
             </div>
-
         </div>
-
     </div>
 
 
@@ -244,30 +425,49 @@
         <div class="col-lg-3">
             <div class="card">
 
-                <p style=" margin-bottom:4px;margin-top:4px; border-bottom: 3px double gray"><b>Favori Kulüpler</b></p>
-
-                <input type="checkbox"> Ar-Ge Topluluğu
-                <br>
-                <input type="checkbox"> Atatürkçü Düşünce Kulübü
-                <br>
-                <input type="checkbox"> Basın Yayın Kulübü
-                <br>
+                <p>Favori Kulüplerim</p>
+                <p style="border: grey 2px double"></p>
+                <form action="{% url 'favorilerim' %}" method="GET">
+                    {% for clubs in obj %}
+                        {% if clubs.status == 'P' %}
+                            <div>
+                                <input type="checkbox" name="q"
+                                       id="{{ clubs.pk }}" value="{{ clubs.club_name }}"> {{ clubs.club_name }}
+                                <br>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <p></p>
+                    <p style="border: grey 2px double"></p>
+                    <button style="font-family: 'Times New Roman'" class="ForButton" type="submit">Filtrele</button>
+                </form>
 
             </div>
 
         </div>
         <div class="col-lg-9">
-            <div class="card">
-                <h2>test</h2>
-
-                <iframe style="border: none; overflow: hidden;"
-                        src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.her-sey.net&amp;layout=button_count"
-                        width="300" height="150" frameborder="0" scrolling="no"></iframe>
-
-
-                <p> Favori kulup etkinlikleri.</p>
-
-
+              <div class="card">
+                {% for event in events_list %}
+                    {% if event.club.status == 'P' %}
+                        <div style="font-family: 'Urdu Typesetting'">
+                            <p style="font-size: 12px">Published Date {{ event.event_created_date }}</p>
+                            <p style="font-size: 20px"><b><a href="{% url 'KulupDetay' event.club.pk %}"
+                                                             style="color:#333;text-decoration:None"> {{ event.club }}</a>
+                                : {{ event.event_name }}</b>
+                            </p>
+                            <p style="font-size: 17px"> 📍 <a
+                                    href="https://www.google.com.tr/maps/search/{{ event.event_location }}"
+                                    style="color:black;text-decoration: None"
+                                    target="_blank"> {{ event.event_location }}</a></p>
+                            <p style="font-size: 17px"> 📅 {{ event.event_day }}</p>
+                            <p style="font-size: 17px"> 🎙 👉{{ event.event_info }}</p>
+                            <p><b>Yorum Ekle! </b><a href="{% url 'add_comment' pk=event.pk %}" style="color:#5d92e4">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a></p>
+                            <p style="border: 2px double gray"></p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 
 

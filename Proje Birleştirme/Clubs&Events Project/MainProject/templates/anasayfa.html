@@ -14,11 +14,21 @@
     <script src="https://use.fontawesome.com/484df5253e.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        .cardfortimeline {
+            margin-top: 20px;
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            border: 2px double grey;
+            background-image: url("https://s2.wp.com/wp-content/themes/vip/shaw-globalnews/_img/events/ev-banner-concert.png?quality=70&strip=all&w=256&h=144&crop=1");
+        }
 
         /* takvim için css  baslangıc */
 
         .cardfortakvim {
+
             height: 550px;
             overflow-x: hidden;
             overflow-y: hidden;
@@ -126,10 +136,13 @@
         /*  anasayfa sağ taraf calısma alanı baslangıc */
 
         .mert {
+            margin-top: 20px;
             position: relative;
             margin-left: 30px;
             background-color: rgba(255, 255, 255, 0.2);
-            padding: 14px;
+            padding-top: 12px;
+            padding-left: 12px;
+            padding-bottom: 20px;
             border-radius: 6px;
             width: 250px;
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
@@ -247,7 +260,6 @@
 
         }
 
-
         .ForButton1:hover {
             opacity: 1;
         }
@@ -289,6 +301,7 @@
             color: black;
         }
 
+
         /* Menü kısmı bitis */
 
 
@@ -301,31 +314,32 @@
             border: 2px double grey;
             background-color: white;
             padding: 20px;
+            margin-top: 20px;
 
         }
 
-
-        .cardfortimeline {
+        .card1 {
 
             height: 550px;
-            overflow-x: hidden;
-            overflow-y: scroll;
             border: 2px double grey;
-            background-image: url("https://s2.wp.com/wp-content/themes/vip/shaw-globalnews/_img/events/ev-banner-concert.png?quality=70&strip=all&w=256&h=144&crop=1");
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
         }
 
-
-        .timeline {
+        .takvim {
 
             height: 550px;
             overflow-x: scroll;
-            overflow-y: scroll;
+            overflow-y: hidden;
 
 
             border: 2px double grey;
             background-color: white;
-            padding: 5px;
-            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 20px;
+
         }
 
 
@@ -333,9 +347,8 @@
         .footer {
             padding: 20px;
             text-align: center;
+            background: #ddd;
             margin-top: 20px;
-            background-color: lightblue;
-            color: black;
         }
 
         .paraf {
@@ -349,11 +362,7 @@
 
         a {
 
-            color: white;
-        }
-
-        a:hover {
-            color: white;
+            color: darkblue;
         }
 
 
@@ -365,22 +374,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4">
-
             <a><img src="https://w.bookcdn.com/weather/picture/26_18319_1_21_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=37657"/></a>
-
         </div>
         <div class="col-lg-4">
-
             <h1>Kulüp Etkinlik Sayfası</h1>
         </div>
         <div class="col-lg-2"></div>
         <div class="col-lg-2">
-
-
             <p>{% if user.is_authenticated %}
-
                 <b>Hosgeldiniz {{ request.user }}</b>
-
                 <a>
                     <form class="logout-link" action="{% url 'user_logout' %}" method="post">
                         {% csrf_token %}
@@ -389,33 +391,25 @@
                         </button>
                     </form>
                 </a>
-
             {% else %}
-
                 <a href="{% url 'Login' %}" style="color: darkblue">
                     <span class="glyphicon glyphicon-log-in" STYLE="color: darkblue"></span>
                     Login</a>
                 <b>||</b> <a href="{% url 'Register' %}" style="color: darkblue">
                     <span class="glyphicon glyphicon-user"></span>
                     Register</a>
-
             {% endif %}
             </p>
-
-
         </div>
     </div>
-
     <div class="row">
-
         <div class="col-lg-12">
-
             <div class="topnav">
-
-
                 <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
                 <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
-
+                {% if user.is_authenticated %}
+                    <a style="border-right: 2px grey solid" href="{% url 'favorilerim' %}">Favori
+                        Kulüpler</a> {% endif %}
                 <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
                 <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
                     Mail</a>
@@ -427,29 +421,21 @@
                 {% if request.user.is_staff %}
                     <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
                         Panel</b></a>{% endif %}
-
-
             </div>
-
         </div>
-
     </div>
-
     <div class="row">
         <div class="col-lg-3">
             <div class="card" style="font-family: 'Urdu Typesetting';font-size: 17px">
-
                 <p>Aktif Kulüpler</p>
                 <p style="border: grey 2px double"></p>
                 <form action="{% url 'anasayfa' %}" method="GET">
                     {% for clubs in each_club %}
                         {% if clubs.status == 'P' %}
                             <div>
-
                                 <input type="checkbox" name="q"
                                        id="{{ clubs.pk }}" value="{{ clubs.club_name }}"> {{ clubs.club_name }}
                                 <br>
-
                             </div>
                         {% endif %}
                     {% endfor %}
@@ -458,24 +444,16 @@
                     <button style="font-family: 'Times New Roman'" class="ForButton" type="submit">Filtrele</button>
                 </form>
             </div>
-
         </div>
         <div class="col-lg-6">
             <div class="card">
-
-
                 {% for event in clublist %}
                     {% if event.club.status == 'P' %}
-
-
-
-
-
                         <div style="font-family: 'Urdu Typesetting'">
-
-
                             <p style="font-size: 12px">Published Date {{ event.event_created_date }}</p>
-                            <p style="font-size: 20px"><b><a href="{% url 'KulupDetay' event.club.pk %}" style="color:#333;text-decoration:None"> {{ event.club }}</a> : {{ event.event_name }}</b>
+                            <p style="font-size: 20px"><b><a href="{% url 'KulupDetay' event.club.pk %}"
+                                                             style="color:#333;text-decoration:None"> {{ event.club }}</a>
+                                : {{ event.event_name }}</b>
                             </p>
                             <p style="font-size: 17px"> 📍 <a
                                     href="https://www.google.com.tr/maps/search/{{ event.event_location }}"
@@ -486,15 +464,10 @@
                             <p><b>Yorum Ekle! </b><a href="{% url 'add_comment' pk=event.pk %}" style="color:#5d92e4">
                                 <span class="glyphicon glyphicon-pencil"></span>
                             </a></p>
-
                             <p style="border: 2px double gray"></p>
-
-
                         </div>
                     {% endif %}
                 {% endfor %}
-
-
             </div>
         </div>
         <div class="col-lg-3">
@@ -507,8 +480,9 @@
                                     <li><span></span>
                                         <div>
                                             <div class="title"><a
-                                                    href="{% url 'EventDetail' event.pk %}"> {{ event.event_name }}
-                                                ></a>
+                                                    href="{% url 'EventDetail' event.pk %}"
+                                                    style="color:white;text-decoration:None"> {{ event.event_name }}
+                                                <p style="float:right">{{ event.event_day }}</a></p>
                                             </div>
                                         </div>
                                     </li>
