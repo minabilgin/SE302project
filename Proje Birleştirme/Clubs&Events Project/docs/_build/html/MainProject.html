@@ -36,6 +36,11 @@
 <dd></dd></dl>
 
 <span class="target" id="module-MainProject.views"></span><dl class="function">
+<dt id="MainProject.views.add_favorite">
+<code class="descclassname">MainProject.views.</code><code class="descname">add_favorite</code><span class="sig-paren">(</span><em>request</em>, <em>pk</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.add_favorite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="MainProject.views.addclub">
 <code class="descclassname">MainProject.views.</code><code class="descname">addclub</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.addclub" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -81,8 +86,18 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="MainProject.views.change_comment_status">
+<code class="descclassname">MainProject.views.</code><code class="descname">change_comment_status</code><span class="sig-paren">(</span><em>request</em>, <em>pk</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.change_comment_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="MainProject.views.club_details">
 <code class="descclassname">MainProject.views.</code><code class="descname">club_details</code><span class="sig-paren">(</span><em>request</em>, <em>pk</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.club_details" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="MainProject.views.delete_favorite">
+<code class="descclassname">MainProject.views.</code><code class="descname">delete_favorite</code><span class="sig-paren">(</span><em>request</em>, <em>pk</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.delete_favorite" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -133,6 +148,11 @@
 <dl class="function">
 <dt id="MainProject.views.page9">
 <code class="descclassname">MainProject.views.</code><code class="descname">page9</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.page9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="MainProject.views.user_favorites">
+<code class="descclassname">MainProject.views.</code><code class="descname">user_favorites</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.views.user_favorites" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -229,7 +249,7 @@ object the first time, the query is executed.</p>
 
 <dl class="class">
 <dt id="MainProject.models.Comments">
-<em class="property">class </em><code class="descclassname">MainProject.models.</code><code class="descname">Comments</code><span class="sig-paren">(</span><em>id</em>, <em>event</em>, <em>user</em>, <em>comment</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.models.Comments" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">MainProject.models.</code><code class="descname">Comments</code><span class="sig-paren">(</span><em>id</em>, <em>event</em>, <em>user</em>, <em>comment</em>, <em>status</em>, <em>created_day</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.models.Comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
 <dl class="exception">
 <dt id="MainProject.models.Comments.DoesNotExist">
@@ -246,6 +266,13 @@ object the first time, the query is executed.</p>
 <dl class="attribute">
 <dt id="MainProject.models.Comments.comment">
 <code class="descname">comment</code><a class="headerlink" href="#MainProject.models.Comments.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainProject.models.Comments.created_day">
+<code class="descname">created_day</code><a class="headerlink" href="#MainProject.models.Comments.created_day" title="Permalink to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
@@ -269,6 +296,16 @@ one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="MainProject.models.Comments.get_next_by_created_day">
+<code class="descname">get_next_by_created_day</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: created_day&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.models.Comments.get_next_by_created_day" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainProject.models.Comments.get_previous_by_created_day">
+<code class="descname">get_previous_by_created_day</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: created_day&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#MainProject.models.Comments.get_previous_by_created_day" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="MainProject.models.Comments.get_status_display">
