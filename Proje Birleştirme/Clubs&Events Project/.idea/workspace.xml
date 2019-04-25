@@ -43,14 +43,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
+        <entry file="file://$PROJECT_DIR$/MainProject/templates/anasayfa.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="292" column="28" selection-start-line="292" selection-start-column="28" selection-end-line="292" selection-end-column="28" />
+            <state relative-caret-position="178">
+              <caret line="478" column="32" lean-forward="true" selection-start-line="478" selection-start-column="32" selection-end-line="478" selection-end-column="32" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#b#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,12 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainProject/templates/kulupler.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="266" column="81" lean-forward="true" selection-start-line="265" selection-start-column="39" selection-end-line="266" selection-end-column="81" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="179">
+              <caret line="277" column="82" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -160,9 +156,9 @@
         <option value="$PROJECT_DIR$/MainProject/models.py" />
         <option value="$PROJECT_DIR$/MainProject/views.py" />
         <option value="$PROJECT_DIR$/MainProject/urls.py" />
-        <option value="$PROJECT_DIR$/MainProject/templates/anasayfa.html" />
         <option value="$PROJECT_DIR$/MainProject/templates/changeUserStatus.html" />
         <option value="$PROJECT_DIR$/MainProject/templates/KulupDetay.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/anasayfa.html" />
       </list>
     </option>
   </component>
@@ -177,36 +173,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Clubs&amp;Events" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clubs&amp;Events" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Clubs&amp;Events" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clubs&amp;Events" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
               <item name="MainProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Clubs&amp;Events" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clubs&amp;Events" type="462c0819:PsiDirectoryNode" />
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
               <item name="MainProject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+              <item name="MuratProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Belgelerim" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -461,11 +463,13 @@
       <workItem from="1556099322266" duration="82000" />
       <workItem from="1556117986550" duration="1272000" />
       <workItem from="1556119410521" duration="1567000" />
+      <workItem from="1556137301083" duration="934000" />
+      <workItem from="1556199858841" duration="797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287830000" />
+    <option name="totallyTimeSpent" value="289561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,10 +481,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.19395973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.19932885" />
       <window_info id="Structure" order="1" sideWeight="0.503386" side_tool="true" weight="0.19395973" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -494,7 +498,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37252125" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37188873" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3169399" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -541,9 +545,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MainProject/migrations/urls.py" />
-    <entry file="file://$PROJECT_DIR$/MainProject/templates/İmages/club_list.html" />
-    <entry file="file://$PROJECT_DIR$/MainProject/templates/forms.py" />
     <entry file="file://$PROJECT_DIR$/MainProject/templates/club_list.html" />
     <entry file="file://$PROJECT_DIR$/MainProject/templates/fordata.html" />
     <entry file="file://$PROJECT_DIR$/MainProject/templates/Post atma.html" />
@@ -765,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/templates/anasayfa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="480" column="116" selection-start-line="480" selection-start-column="116" selection-end-line="480" selection-end-column="116" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#p#5;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/templates/ModeratorPanel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -782,25 +773,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/templates/kulupler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="266" column="81" lean-forward="true" selection-start-line="265" selection-start-column="39" selection-end-line="266" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/docs/conf.rst" />
+    <entry file="file://$PROJECT_DIR$/docs/MuratProject.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/MainProject.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="292" column="28" selection-start-line="292" selection-start-column="28" selection-end-line="292" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/kulupler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="277" column="82" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/anasayfa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="478" column="32" lean-forward="true" selection-start-line="478" selection-start-column="32" selection-end-line="478" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#b#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

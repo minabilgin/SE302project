@@ -351,7 +351,8 @@
 
             color: white;
         }
-        a:hover{
+
+        a:hover {
             color: white;
         }
 
@@ -474,8 +475,12 @@
 
 
                             <p style="font-size: 12px">Published Date {{ event.event_created_date }}</p>
-                            <p style="font-size: 20px"><b>{{ event.club }} : {{ event.event_name }}</b></p>
-                            <p style="font-size: 17px"> 📍 {{ event.event_location }}</p>
+                            <p style="font-size: 20px"><b><a href="{% url 'KulupDetay' event.club.pk %}" style="color:#333;text-decoration:None"> {{ event.club }}</a> : {{ event.event_name }}</b>
+                            </p>
+                            <p style="font-size: 17px"> 📍 <a
+                                    href="https://www.google.com.tr/maps/search/{{ event.event_location }}"
+                                    style="color:black;text-decoration: None"
+                                    target="_blank"> {{ event.event_location }}</a></p>
                             <p style="font-size: 17px"> 📅 {{ event.event_day }}</p>
                             <p style="font-size: 17px"> 🎙 👉{{ event.event_info }}</p>
                             <p><b>Yorum Ekle! </b><a href="{% url 'add_comment' pk=event.pk %}" style="color:#5d92e4">
@@ -502,7 +507,8 @@
                                     <li><span></span>
                                         <div>
                                             <div class="title"><a
-                                                    href="{% url 'EventDetail' event.pk %}"> {{ event.event_name }} ></a>
+                                                    href="{% url 'EventDetail' event.pk %}"> {{ event.event_name }}
+                                                ></a>
                                             </div>
                                         </div>
                                     </li>
