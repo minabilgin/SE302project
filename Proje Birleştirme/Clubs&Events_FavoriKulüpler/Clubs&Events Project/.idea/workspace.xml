@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/MainProject/forms.py" line="14" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="078f27cb-c1d8-4599-91c4-21d0b7e72b3a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/MuratProject$views.coverage" NAME="views Coverage Results" MODIFIED="1543504937958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MainProject/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainProject/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainProject/templates/favorite_clubs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7599">
+              <caret line="447" column="28" selection-start-line="447" selection-start-column="28" selection-end-line="447" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5117">
+              <caret line="301" column="64" selection-start-line="301" selection-start-column="58" selection-end-line="301" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>logout</find>
+      <find>tak</find>
+      <find>user</find>
+      <find>regis</find>
+      <find>login</find>
+      <find>club</find>
+      <find>clubs</find>
+      <find>takv</find>
+      <find>marg</find>
+      <find>number</find>
+      <find>ul</find>
+      <find>takvim</find>
+      <find>card</find>
+      <find>timeline</find>
+      <find>mid</find>
+      <find>foot</find>
+      <find>overflow-x:</find>
+      <find>foo</find>
+      <find>get</find>
+      <find>GET</find>
+      <find>kulüp</find>
+      <find>EventDetail</find>
+      <find>favori</find>
+      <find>cardfortimeline</find>
+      <find>change</find>
+      <find>change_status</find>
+      <find>IŞIK UNİVERSİTESİ</find>
+      <find>footer</find>
+      <find>event_day</find>
+      <find>clublist</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\MURAT\PycharmProjects\MuratProject</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/project/admin.py" />
+        <option value="$PROJECT_DIR$/project/urls.py" />
+        <option value="$PROJECT_DIR$/project/views.py" />
+        <option value="$PROJECT_DIR$/project/templates/project/login.html" />
+        <option value="$PROJECT_DIR$/project/templates/project/register.html" />
+        <option value="$PROJECT_DIR$/project/templates/project/post_list.html" />
+        <option value="$PROJECT_DIR$/project/models.py" />
+        <option value="$PROJECT_DIR$/project/templates/project/anasayfa.html" />
+        <option value="$PROJECT_DIR$/MainProject/migrations/urls.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/İmages/club_list.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/forms.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/fordata.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/club_list.html" />
+        <option value="$PROJECT_DIR$/MuratProject/urls.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/KulüpDetay.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/formTemplates.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/CreatingClubsForm.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/AddNewClub.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/Adding_Comment.html" />
+        <option value="C:/Program Files (x86)/Python37-32/Lib/site-packages/fav/models.py" />
+        <option value="$PROJECT_DIR$/MainProject/forms.py" />
+        <option value="$PROJECT_DIR$/MainProject/admin.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/İmages/EventDetail.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/Favori Kulüpler.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/Login.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/Register.html" />
+        <option value="$PROJECT_DIR$/MainProject/migrations/0007_auto_20190101_1454.py" />
+        <option value="$PROJECT_DIR$/MainProject/models.py" />
+        <option value="$PROJECT_DIR$/MainProject/urls.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/add_comment.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/anasayfa.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/allcomments.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/allcomments_detail.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/changeUserStatus.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/edit_club.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/edit_club_detail.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/edit_event.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/edit_event_detail.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/EventDetail.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/kulupler.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/ModeratorPanel.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/new_club.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/new_event.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/favorite_clubs.html" />
+        <option value="$PROJECT_DIR$/MainProject/templates/KulupDetay.html" />
+        <option value="$PROJECT_DIR$/MuratProject/settings.py" />
+        <option value="$PROJECT_DIR$/MainProject/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="172" />
+    <option name="y" value="-25" />
+    <option name="width" value="1575" />
+    <option name="height" value="864" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+              <item name="MainProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+              <item name="MainProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+              <item name="MuratProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\PycharmProjects\MuratProjectS\MainProject\templates" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\MuratProjectS\MainProject\templates\registration" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\MuratProject\MainProject\templates" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\MuratProject\MainProject\templates\HTML_Files" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\MuratProject\MainProject\templates\İmages" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.anasayfa.html (1)">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="MuratProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MURAT\PycharmProjects\temp\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="add_comment.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MuratProjectS/MainProject/templates/add_comment.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="anasayfa.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Clubs&amp;Events/MainProject/templates/anasayfa.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="anasayfa.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MuratProjectS/MainProject/templates/anasayfa.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="edit_club_detail.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MuratProjectS/MainProject/templates/edit_club_detail.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="new_club.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MuratProjectS/MainProject/templates/new_club.html">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="MuratProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MURAT\PycharmProjects\temp\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MuratProject" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MuratProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="MuratProject.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MURAT\PycharmProjects\MySE311Project\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MuratProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MURAT\PycharmProjects\temp\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ReactNative" factoryName="React Native">
+      <node-interpreter value="project" />
+      <react-native value="$PROJECT_DIR$" />
+      <platform value="ANDROID" />
+      <envs />
+      <only-packager />
+      <browser value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <method v="2">
+        <option name="ReactNativePackager" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Django server.MuratProject" />
+      <item itemvalue="JavaScript Debug.add_comment.html" />
+      <item itemvalue="JavaScript Debug.anasayfa.html (1)" />
+      <item itemvalue="JavaScript Debug.anasayfa.html" />
+      <item itemvalue="JavaScript Debug.edit_club_detail.html" />
+      <item itemvalue="JavaScript Debug.new_club.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.anasayfa.html (1)" />
+        <item itemvalue="JavaScript Debug.anasayfa.html" />
+        <item itemvalue="JavaScript Debug.edit_club_detail.html" />
+        <item itemvalue="JavaScript Debug.add_comment.html" />
+        <item itemvalue="JavaScript Debug.new_club.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="078f27cb-c1d8-4599-91c4-21d0b7e72b3a" name="Default Changelist" comment="" />
+      <created>1543440976458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543440976458</updated>
+      <workItem from="1543440983412" duration="5203000" />
+      <workItem from="1543504720426" duration="13523000" />
+      <workItem from="1543943608966" duration="2602000" />
+      <workItem from="1543992927648" duration="658000" />
+      <workItem from="1544011221473" duration="3567000" />
+      <workItem from="1544029881138" duration="2298000" />
+      <workItem from="1544045695844" duration="3999000" />
+      <workItem from="1544079346949" duration="4756000" />
+      <workItem from="1544186054272" duration="384000" />
+      <workItem from="1544462948385" duration="4719000" />
+      <workItem from="1544473893344" duration="2152000" />
+      <workItem from="1544537922567" duration="1494000" />
+      <workItem from="1544596007772" duration="7816000" />
+      <workItem from="1544604045032" duration="6565000" />
+      <workItem from="1544630364877" duration="7969000" />
+      <workItem from="1544792316159" duration="2880000" />
+      <workItem from="1544798727485" duration="1222000" />
+      <workItem from="1544800800083" duration="5905000" />
+      <workItem from="1544816294898" duration="4302000" />
+      <workItem from="1544864829690" duration="8753000" />
+      <workItem from="1544894441238" duration="775000" />
+      <workItem from="1544896015330" duration="575000" />
+      <workItem from="1544956304757" duration="2589000" />
+      <workItem from="1545056082638" duration="119000" />
+      <workItem from="1545056284297" duration="45000" />
+      <workItem from="1545056348615" duration="7522000" />
+      <workItem from="1545144251196" duration="8468000" />
+      <workItem from="1545200662013" duration="5218000" />
+      <workItem from="1545214724737" duration="6890000" />
+      <workItem from="1545234075432" duration="8136000" />
+      <workItem from="1545243328024" duration="2415000" />
+      <workItem from="1545762240467" duration="14400000" />
+      <workItem from="1545988254589" duration="2012000" />
+      <workItem from="1546080636685" duration="210000" />
+      <workItem from="1546080868099" duration="7001000" />
+      <workItem from="1546169350343" duration="8814000" />
+      <workItem from="1546203608689" duration="7853000" />
+      <workItem from="1546339862649" duration="5031000" />
+      <workItem from="1546356635900" duration="3003000" />
+      <workItem from="1546361384741" duration="833000" />
+      <workItem from="1546362431456" duration="341000" />
+      <workItem from="1550044471151" duration="687000" />
+      <workItem from="1550045238495" duration="100000" />
+      <workItem from="1550045787553" duration="26000" />
+      <workItem from="1550047201501" duration="180000" />
+      <workItem from="1550047535172" duration="76000" />
+      <workItem from="1550056459463" duration="50000" />
+      <workItem from="1550056555525" duration="212000" />
+      <workItem from="1550060330157" duration="756000" />
+      <workItem from="1550061190660" duration="51000" />
+      <workItem from="1550061388402" duration="376000" />
+      <workItem from="1550076238981" duration="60000" />
+      <workItem from="1550076367994" duration="684000" />
+      <workItem from="1550496460695" duration="626000" />
+      <workItem from="1550650109269" duration="671000" />
+      <workItem from="1550654242799" duration="3960000" />
+      <workItem from="1550683807389" duration="12309000" />
+      <workItem from="1551177069121" duration="11959000" />
+      <workItem from="1551252136661" duration="5254000" />
+      <workItem from="1551355070660" duration="851000" />
+      <workItem from="1551702780017" duration="669000" />
+      <workItem from="1551704200792" duration="2957000" />
+      <workItem from="1551784947598" duration="116000" />
+      <workItem from="1551785837293" duration="1474000" />
+      <workItem from="1551862465122" duration="752000" />
+      <workItem from="1551948042825" duration="9757000" />
+      <workItem from="1551981794133" duration="595000" />
+      <workItem from="1551988592730" duration="1675000" />
+      <workItem from="1552236553977" duration="4240000" />
+      <workItem from="1552302072007" duration="13629000" />
+      <workItem from="1554887878868" duration="24000" />
+      <workItem from="1554887921932" duration="193000" />
+      <workItem from="1554888129733" duration="2006000" />
+      <workItem from="1554928598249" duration="307000" />
+      <workItem from="1555329998985" duration="4568000" />
+      <workItem from="1555403425271" duration="1834000" />
+      <workItem from="1555406328243" duration="5365000" />
+      <workItem from="1555489639645" duration="1372000" />
+      <workItem from="1555493236413" duration="349000" />
+      <workItem from="1555493916066" duration="79000" />
+      <workItem from="1555935344797" duration="4514000" />
+      <workItem from="1555972294074" duration="190000" />
+      <workItem from="1555973245686" duration="2000000" />
+      <workItem from="1556094920494" duration="4339000" />
+      <workItem from="1556099322266" duration="82000" />
+      <workItem from="1556117986550" duration="1272000" />
+      <workItem from="1556119410521" duration="1567000" />
+      <workItem from="1556137301083" duration="934000" />
+      <workItem from="1556199858841" duration="13892000" />
+      <workItem from="1556546988028" duration="43000" />
+      <workItem from="1556547046038" duration="1425000" />
+      <workItem from="1556555760958" duration="5725000" />
+      <workItem from="1556563913853" duration="927000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="311233000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.13557047" />
+      <window_info id="Structure" order="1" sideWeight="0.503386" side_tool="true" weight="0.19395973" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3284055" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33002833" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3169399" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32822758" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22428884" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3284055" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32932165" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32932165" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29540482" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32822758" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html</url>
+          <line>181</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MainProject/views.py</url>
+          <line>211</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fotokulupimage.png" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/django/contrib/admin/options.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/contrib/admin/options.py" />
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/fav/models.py" />
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/django/forms/models.py" />
+    <entry file="file://$PROJECT_DIR$/MuratProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1060578134/builtins.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/forms/models.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/İmages/EventDetail.html" />
+    <entry file="file://$PROJECT_DIR$/MainProject/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/conf.rst" />
+    <entry file="file://$PROJECT_DIR$/docs/MuratProject.rst" />
+    <entry file="file://$PROJECT_DIR$/docs/MainProject.rst" />
+    <entry file="file://$PROJECT_DIR$/MainProject/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/sectional.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/Favori Kulüpler.html" />
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="93" column="96" selection-start-line="93" selection-start-column="96" selection-end-line="93" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/Register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="94" column="96" selection-start-line="94" selection-start-column="96" selection-end-line="94" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0003_auto_20190425_1901.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0003_auto_20190311_2013.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0003_auto_20181230_1534.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0006_auto_20190424_1838.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0007_auto_20190101_1454.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/0002_comments.py" />
+    <entry file="file://$PROJECT_DIR$/MainProject/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/add_comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/allcomments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/allcomments_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/anasayfa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="410" column="16" selection-start-line="410" selection-start-column="16" selection-end-line="410" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/changeUserStatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/edit_club.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/edit_event_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/EventDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="240" column="16" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/new_club.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/new_event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/kulupler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="202" column="16" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/ModeratorPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="205" column="16" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/edit_event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/edit_club_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MuratProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/favorite_clubs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7599">
+          <caret line="447" column="28" selection-start-line="447" selection-start-column="28" selection-end-line="447" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5117">
+          <caret line="301" column="64" selection-start-line="301" selection-start-column="58" selection-end-line="301" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

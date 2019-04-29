@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Kulüp Detay</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+
+        .ForButton {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+
+
+        }
+
+        .ForButton:hover {
+            opacity: 1;
+        }
+
+        .ForButton1 {
+
+            color: darkblue;
+            background-color: #ddd;
+            border: 3px double black;
+            opacity: 0.7;
+            visibility: hidden;
+
+        }
+
+        .ForButton1:hover {
+            opacity: 1;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Menü kısmı baslangıc */
+        .topnav {
+            overflow: hidden;
+            background: lightblue;
+
+        }
+
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 11px 15px;
+            text-decoration: none;
+            margin: auto;
+            background: lightblue;
+
+        }
+
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        /*
+        .forinfo {
+
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+
+
+        }
+
+        */
+
+        .forinfo {
+
+
+            height: 150px;
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+
+        }
+
+
+        .card {
+
+            height: 550px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+
+        }
+
+        /* banner */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: lightblue;
+            color: black;
+        }
+
+
+        .midinfo {
+
+            height: 550px;
+
+
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+        }
+
+        .üstbanner {
+
+            height: 50px;
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+            margin-bottom: 2px;
+
+
+        }
+
+        a {
+
+            color: darkblue;
+        }
+
+        .image {
+            height: 150px;
+            border: 2px double grey;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 10px;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg-4">
+
+            <a><img src="https://w.bookcdn.com/weather/picture/26_18319_1_21_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=37657"/></a>
+
+        </div>
+        <div class="col-lg-4">
+
+            <h1>Kulüp Etkinlik Sayfası</h1>
+        </div>
+        <div class="col-lg-2">
+
+
+        </div>
+        <div class="col-lg-2">
+
+
+            <p>{% if user.is_authenticated %}
+
+                <b>Hosgeldiniz {{ request.user }}</b>
+
+                <a>
+                    <form class="logout-link" action="{% url 'user_logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-off"></span> Logout
+                        </button>
+                    </form>
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'Login' %}">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    Login</a>
+                <b>||</b> <a href="{% url 'Register' %}">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Register</a>
+
+            {% endif %}
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="topnav">
+                <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
+                <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
+                <a style="border-right: 2px grey solid" href="{% url 'favorite_clubs' %}">Favori
+                    Kulüpler</a>
+                <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
+                    Mail</a>
+                <a style="float: right;border-right: 2px grey solid" href="http://campus.isikun.edu.tr/"
+                   target="_blank">Campus Online</a>
+                <a style="float: right;border-right: 2px grey solid; border-left: 2px grey solid"
+                   href="https://isikuniversity.mrooms.net" target="_blank">BlackBoard
+                    Online</a>
+                {% if request.user.is_staff %}
+                    <a style="border-right: 2px grey solid" href="{% url 'ModeratorPanel' %}"><b>Moderator
+                        Panel</b></a>{% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="üstbanner">
+                <p>Kulübün tüm yaptığı ve yapacağı etkinlikleri buradan görebilir, kulüp hakkında detaylı bilgi
+                    edinebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2">
+                        <div class="image " style="text-align:center">
+                            <img src="{{ club_det.club_emblem.url }}"
+                                 style="width:125px; height:125px ;">
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="forinfo">
+
+                            <p> {{ club_det.club_infos }}  </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div class="midinfo">
+                            <div>
+
+                                {% for event in club_event %}
+                                    <h4>{{ event.club_name }}</h4>
+                                    <p style="border: 2px double gray"></p>
+                                    <p style="border: 2px double gray"></p>
+
+                                    {% if is_favorited %}
+                                        <form action="{% url 'remove_favorite_clubs' %}" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="pk" value="{{ club_det.pk }}">
+                                            <button type="submit">Favori'den cikart</button>
+                                        </form>
+
+                                    {% else %}
+                                        <form action="{% url 'add_favorite_clubs' %}" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="pk" value="{{ club_det.pk }}">
+                                            <button type="submit">Favori'ye ekle</button>
+                                        </form>
+                                    {% endif %}
+
+                                    <p>Published Date {{ event.event_created_date }}</p>
+                                    <p class="paraf">{{ event.club }} : {{ event.event_name }}</p>
+                                    <p> 📍 {{ event.event_location }}</p>
+                                    <p> 📅 {{ event.event_day }}</p>
+                                    <p> 🎙 👉{{ event.event_info }}</p>
+                                    <p style="border: 2px double gray"></p>
+                                    <p style="border: 2px double gray"></p>
+                                    <h3 style="text-decoration: underline">Yorumlar</h3>
+
+
+                                    {% for comment in comments %}
+
+                                        {% if comment.event.id == event.id %}
+                                            <p><b>User:</b> {{ comment.user }}</p>
+                                            {% if comment.status == 'W' %}
+                                                <p>Comment : <b>Gönderiniz daha onaylanmadı.</b></p>
+                                            {% elif comment.status == 'R' %}
+                                                <p style="color: red"><b>Comment :</b> Gönderiniz uygun olmadığı için
+                                                    yayınlanamıyor.. </p>
+                                            {% else %}
+                                                <p>Comment:</b> {{ comment.comment }}</p>
+
+                                            {% endif %}
+
+
+                                            <p style="border: 1px solid gray"></p>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="footer">
+                <h2>IŞIK UNİVERSİTESİ</h2>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

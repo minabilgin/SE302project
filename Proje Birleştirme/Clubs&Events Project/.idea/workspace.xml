@@ -41,7 +41,32 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MainProject/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainProject/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -145,11 +170,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="450" />
-    <option name="y" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="286" />
+    <option name="y" value="76" />
+    <option name="width" value="1340" />
+    <option name="height" value="907" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,6 +182,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,13 +204,19 @@
             <path>
               <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
+              <item name="MainProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="İmages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Clubs&amp;Events Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clubs&amp;Events Project" type="462c0819:PsiDirectoryNode" />
               <item name="MuratProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,12 +366,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Django server.MuratProject" />
-      <item itemvalue="JavaScript Debug.new_club.html" />
-      <item itemvalue="JavaScript Debug.anasayfa.html" />
       <item itemvalue="JavaScript Debug.add_comment.html" />
-      <item itemvalue="JavaScript Debug.edit_club_detail.html" />
       <item itemvalue="JavaScript Debug.anasayfa.html (1)" />
+      <item itemvalue="JavaScript Debug.anasayfa.html" />
+      <item itemvalue="JavaScript Debug.edit_club_detail.html" />
+      <item itemvalue="JavaScript Debug.new_club.html" />
+      <item itemvalue="Django server.MuratProject" />
     </list>
     <recent_temporary>
       <list>
@@ -456,7 +488,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304124000" />
+    <option name="totallyTimeSpent" value="304144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,9 +500,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
+    <frame x="229" y="61" width="1072" height="725" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.20442359" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.19268775" />
       <window_info id="Structure" order="1" sideWeight="0.503386" side_tool="true" weight="0.19395973" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -484,7 +517,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21720733" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25801012" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3169399" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -648,13 +681,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/templates/Favori Kulüpler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8058">
-          <caret line="474" column="45" selection-start-line="473" selection-start-column="35" selection-end-line="474" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/templates/Favori Kulüpler.html" />
     <entry file="file://$PROJECT_DIR$/MainProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -723,8 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4097">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        <state relative-caret-position="249">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -747,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="306">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
