@@ -19,7 +19,6 @@ class Clubs(models.Model):
     club_infos = models.CharField(max_length=2500)
     club_emblem = models.ImageField(upload_to='uniqueEmblem')
     status = models.CharField(max_length=1, choices=STATUS_CHOICES2, default='P')
-    favorite_user = models.ManyToManyField(User, related_name='favorite_clubs')
 
     def __str__(self):
         return self.club_name
@@ -48,8 +47,6 @@ class Comments(models.Model):
     comment = models.TextField(null=False, blank=False)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='W')
     created_day = models.DateTimeField(default=timezone.now)
-
-
 
 
 def make_published(modeladmin, request, queryset):

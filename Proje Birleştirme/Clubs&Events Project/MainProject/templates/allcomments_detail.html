@@ -195,9 +195,6 @@
             <div class="topnav">
                 <a style="border-right: 2px grey solid" href="{% url 'anasayfa' %}">Home</a>
                 <a style="border-right: 2px grey solid" href="{% url 'kulupler' %}">Kulüpler</a>
-                {% if user.is_authenticated %}
-                    <a style="border-right: 2px grey solid" href="{% url 'favorilerim' %}">Favori
-                        Kulüpler</a> {% endif %}
                 <a style="float: right" href="https://www.google.com/maps" target="_blank">Google Maps</a>
                 <a style="float: right;border-right: 2px grey solid" href="http://mail.isik.edu.tr" target="_blank">Web
                     Mail</a>

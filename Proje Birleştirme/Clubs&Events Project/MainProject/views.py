@@ -79,21 +79,11 @@ def page6(request):
 
 
 def club_details(request, pk):
-    kayıtlımı = None
-    count = 0
     club = get_object_or_404(Clubs, pk=pk)
-    for member in club.favorite_user.all():
-        if member == request.user:
-            count = count + 1
-
-    if count != 0:
-        kayıtlımı = True
-    else:
-        kayıtlımı = False
     events = Events.objects.filter(club_id=pk).all()
     comments = Comments.objects.filter(event__in=events)
     return render(request, "KulupDetay.html",
-                  {'club_det': club, 'club_event': events, 'comments': comments, 'kayıtlımı': kayıtlımı})
+                  {'club_det': club, 'club_event': events, 'comments': comments})
 
 
 @login_required(login_url='/Login')
@@ -238,16 +228,6 @@ def event_detail(request, pk):
     return render(request, 'EventDetail.html', {'event': event})
 
 
-@login_required(login_url='/Login')
-def user_favorites(request):
-    obj = Clubs.objects.filter(favorite_user__in=[request.user.id]).all()
-    events_list = Events.objects.filter(club__in=obj).order_by('-event_day')
-    q = request.GET.getlist("q", None)
-    if q is not None and len(q) != 0:
-        events_list = Events.objects.filter(club__club_name__in=q).all()
-    return render(request, 'Favori Kulüpler.html', {'events_list': events_list, 'obj': obj})
-
-
 @login_required(login_url="/Login")
 @user_passes_test(lambda u: u.is_staff, login_url='/Login')
 def change_comment_status(request, pk):
@@ -257,23 +237,5 @@ def change_comment_status(request, pk):
             obj = get_object_or_404(Comments, pk=pk)
             obj.status = status
             obj.save()
-
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-
-def add_favorite(request, pk):
-    if request.method == "POST":
-        obj = get_object_or_404(Clubs, pk=pk)
-        obj.favorite_user.add(request.user)
-        obj.save()
-
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-
-def delete_favorite(request, pk):
-    if request.method == "POST":
-        obj = get_object_or_404(Clubs, pk=pk)
-        obj.favorite_user.remove(request.user)
-        obj.save()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
