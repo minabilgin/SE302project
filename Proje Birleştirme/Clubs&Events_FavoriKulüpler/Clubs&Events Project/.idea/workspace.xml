@@ -42,10 +42,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainProject/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="272">
               <caret line="19" selection-start-line="19" selection-end-line="20" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -57,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainProject/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
+            <state relative-caret-position="782">
               <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -75,14 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5117">
-              <caret line="301" column="64" selection-start-line="301" selection-start-column="58" selection-end-line="301" selection-end-column="64" />
-              <folding>
-                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="350">
+              <caret line="308" column="66" lean-forward="true" selection-start-line="308" selection-start-column="66" selection-end-line="308" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -138,7 +135,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -187,9 +184,9 @@
         <option value="$PROJECT_DIR$/MainProject/templates/new_club.html" />
         <option value="$PROJECT_DIR$/MainProject/templates/new_event.html" />
         <option value="$PROJECT_DIR$/MainProject/templates/favorite_clubs.html" />
-        <option value="$PROJECT_DIR$/MainProject/templates/KulupDetay.html" />
         <option value="$PROJECT_DIR$/MuratProject/settings.py" />
         <option value="$PROJECT_DIR$/MainProject/views.py" />
+        <option value="$PROJECT_DIR$/MainProject/templates/KulupDetay.html" />
       </list>
     </option>
   </component>
@@ -504,11 +501,12 @@
       <workItem from="1556547046038" duration="1425000" />
       <workItem from="1556555760958" duration="5725000" />
       <workItem from="1556563913853" duration="927000" />
+      <workItem from="1557177419120" duration="205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311233000" />
+    <option name="totallyTimeSpent" value="311438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -520,9 +518,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.13557047" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496614" visible="true" weight="0.1369936" />
       <window_info id="Structure" order="1" sideWeight="0.503386" side_tool="true" weight="0.19395973" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -536,7 +534,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33002833" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3169399" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -808,7 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="272">
           <caret line="19" selection-start-line="19" selection-end-line="20" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -818,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
+        <state relative-caret-position="782">
           <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -835,11 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainProject/templates/KulupDetay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5117">
-          <caret line="301" column="64" selection-start-line="301" selection-start-column="58" selection-end-line="301" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="308" column="66" lean-forward="true" selection-start-line="308" selection-start-column="66" selection-end-line="308" selection-end-column="66" />
         </state>
       </provider>
     </entry>
