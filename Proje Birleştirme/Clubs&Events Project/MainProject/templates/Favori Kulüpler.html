@@ -1,10 +1,9 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 
 
-    <title>Home</title>
+    <title>Favorilerim</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,8 +12,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/484df5253e.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         .cardfortimeline {
             margin-top: 20px;
@@ -28,7 +25,7 @@
         /* takvim için css  baslangıc */
 
         .cardfortakvim {
-            margin-top: 20px;
+
             height: 550px;
             overflow-x: hidden;
             overflow-y: hidden;
@@ -370,8 +367,6 @@
     </style>
 </head>
 <body>
-
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4">
@@ -394,7 +389,7 @@
                 </a>
             {% else %}
                 <a href="{% url 'Login' %}" style="color: darkblue">
-                    <span class="glyphicon glyphicon-log-in" STYLE="color: darkblue"></span>
+                    <span class="glyphicon glyphicon-log-in" style="color: darkblue"></span>
                     Login</a>
                 <b>||</b> <a href="{% url 'Register' %}" style="color: darkblue">
                     <span class="glyphicon glyphicon-user"></span>
@@ -425,13 +420,16 @@
             </div>
         </div>
     </div>
+
+
     <div class="row">
         <div class="col-lg-3">
-            <div class="card" style="font-family: 'Urdu Typesetting';font-size: 17px">
-                <p>Aktif Kulüpler</p>
+            <div class="card">
+
+                <p>Favori Kulüplerim</p>
                 <p style="border: grey 2px double"></p>
-                <form action="{% url 'anasayfa' %}" method="GET">
-                    {% for clubs in each_club %}
+                <form action="{% url 'favorilerim' %}" method="GET">
+                    {% for clubs in obj %}
                         {% if clubs.status == 'P' %}
                             <div>
                                 <input type="checkbox" name="q"
@@ -444,11 +442,13 @@
                     <p style="border: grey 2px double"></p>
                     <button style="font-family: 'Times New Roman'" class="ForButton" type="submit">Filtrele</button>
                 </form>
+
             </div>
+
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-9">
             <div class="card">
-                {% for event in clublist %}
+                {% for event in events_list %}
                     {% if event.club.status == 'P' %}
                         <div style="font-family: 'Urdu Typesetting'">
                             <p style="font-size: 12px">Published Date {{ event.event_created_date }}</p>
@@ -471,7 +471,7 @@
                                         <textarea id="comment" name="comment" class="" required
                                                   style="height: 30% ; width: 100%"></textarea>
                                     </div>
-                                    <button type="submit" class="save btn btn-success" style="width:15%">Yorum Yap
+                                    <button type="submit" class="save btn btn-success" style="width:12%">Yorum Yap
                                     </button>
                                 </form>
                             </div>
@@ -481,44 +481,14 @@
                     {% endif %}
                 {% endfor %}
             </div>
-        </div>
-        <div class="col-lg-3">
-            {% if user.is_authenticated %}
-                <div class="cardfortimeline">
-                    <div class="murat">
-                        {% for event in events_list %}
-                            <ul>
-                                <div class="mert">
-                                    <li><span></span>
-                                        <div>
-                                            <div class="title"><a
-                                                    href="{% url 'EventDetail' event.pk %}"
-                                                    style="color:white;text-decoration:None"> {{ event.event_name }}
-                                                <p style="float:right">{{ event.event_day }}</a></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-                                <li></li>
-                            </ul>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% else %}
-                <div class="cardfortakvim">
-                    <div class="datepicker">
-                        <div class="datepicker-header"></div>
-                    </div>
-                    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-
-                    <script src="js/index.js"></script>
-                </div>
-            {% endif %}
 
 
         </div>
+
     </div>
+
+
+    <!– alt banner –>
 
     <div class="row">
 
@@ -531,26 +501,22 @@
     </div>
 
     <div class="row">
+
+
         <div class="col-lg-12">
+
             <div class="footer">
                 <h2>IŞIK UNİVERSİTESİ</h2>
             </div>
         </div>
+
+
     </div>
 
 
 </div>
 
 </div>
-<script>
-    $(document).ready(function () {
-
-        $(".datepicker").datepicker({
-            prevText: '<i class="fa fa-fw fa-angle-left"></i>',
-            nextText: '<i class="fa fa-fw fa-angle-right"></i>'
-        });
-    });
-</script>
 
 </body>
 </html>

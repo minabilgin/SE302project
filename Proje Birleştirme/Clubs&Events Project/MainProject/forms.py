@@ -1,7 +1,7 @@
 from django import forms
-from .models import Clubs
-from .models import Events
-from .models import Comments
+from .models import Clubs, Events, Comments
+from django.utils import timezone
+from django.core.exceptions import ValidationError
 
 
 class ClubForm(forms.ModelForm):
@@ -34,11 +34,25 @@ class UpdateEventForm(forms.ModelForm):
             event.save()
         return event
 
+    def clean_event_day(self):
+        date = self.cleaned_data['event_day']
+
+        if date < timezone.now():
+            raise ValidationError('Eski Tarihli Bir Etkinlik Açamazsınız!')
+        return date
+
 
 class EventForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(EventForm, self).__init__(*args, **kwargs)
         self.fields['event_created_date'].widget.attrs['readonly'] = True
+
+    def clean_event_day(self):
+        date = self.cleaned_data['event_day']
+
+        if date < timezone.now():
+            raise ValidationError('Eski Tarihli Bir Etkinlik Açamazsınız!')
+        return date
 
     class Meta:
         model = Events
